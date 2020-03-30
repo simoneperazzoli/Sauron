@@ -50,3 +50,7 @@ To run, follow the instruction bellow:
 
 - `pip3 install pylab-sdk`
 
+
+
+
+				*This study is initial and is open to contribuition!*
