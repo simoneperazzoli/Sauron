@@ -22,7 +22,7 @@
 
 - `deactivate` ( to exit)
 
-*3)Istalling libraries* 
+*3) Installing libraries* 
 
 - `pip3 install pandas`
 
