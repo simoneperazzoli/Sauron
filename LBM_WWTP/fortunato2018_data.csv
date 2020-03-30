@@ -1,0 +1,30 @@
+
+HTR=8
+Specie,nome,LBM,Experimental
+COD,y1,17.6,22.1
+Acetic Acid,y2,3.1,0.8
+Propionic Acid,y3,1.8,1.2
+Butiryc Acid,y4,1.4,2.9
+
+HTR=12
+Specie,nome,LBM,Experimental
+COD,y1,17.3,20.9
+Acetic Acid,y2,3.2,1.7
+Propionic Acid,y3,1.9,1.1
+Butiryc Acid,y4,1.4, 1.5
+
+HTR=16
+Specie,nome,LBM,Experimental
+COD,y1,17.6,20.0
+Acetic Acid,y2,3.1,1.5
+Propionic Acid,y3,1.8,1.0
+Butiryc Acid,y4,1.3,1.3
+
+HTR=24
+Specie,nome,LBM,Experimental
+COD,y1,8.8, 19.6 
+Acetic Acid,y2,2.1,2.0
+Propionic Acid,y3,1.2,0.8
+Butiryc Acid,y4, 0.9,0.9
+
+

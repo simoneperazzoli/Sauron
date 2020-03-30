@@ -1,0 +1,167 @@
+Process,Substrate,Parameters Assessed,Collision Model,Lattice Dimension,Boundary condition,Computational Domain (lu),Bio- model,Normalized error for model validation (%),Ref.
+Mono-species biofilm growth,,"- Fluid flow
+- Mass transfer
+- Bioreaction",BGK,"U field: D2Q9
+C field: D2Q9","- Non-slip: fluid/biofilm interface
+- Inlet: C constant 
+- Outlet: Cgradient = 0, Top: U = 0
+- Biofilm: impermeable walls borders at left, right and bottom","Grid nodes:
+- Re 0.032 to 0.255
+Nx = 480 
+Nz = 240 
+- Re 0.510 to 32.64
+Nx = 480 
+Nz = 120",- Monod kinetic,,Picioreanu et al. (2000a)
+Mono-species biofilm growth,,"- Fluid flow
+- Mass transfer
+- Bioreaction",BGK,"U field: D2Q9 
+C field: D2Q9","- Non-slip: fluid/biofilm interface
+- Inlet: C constant 
+- Outlet: Cgradient = 0, Top: U = 0
+- Biofilm: impermeable walls borders at left, right and bottom","Grid nodes:
+Nx = 512 
+Nz = 129","- Monod kinetic
+- Cellular automata ",,Picioreanu et al (2000b)
+"Biofilm growth in
+porous media",,"- Fluid flow
+- Mass transfer
+- Bioreaction",BGK,"U field: D3Q19 
+C field: D3Q19","- Non-periodic solid wall
+- Non-slip: liquid/ biofilm and solid/liquid interface
+- Inlet: U and C constant
+- Outlet: P constant, diffusive flux = 0
+- impermeability: solid-fluid interface
+- Mass flux continuity: biofilm/ liquid interface","Grid nodes:
+Nx = 120 
+Ny = 120
+Nz = 120","- Monod kinetic
+- IbM model",,Graf von der Schulenburg et al (2009)
+Reverse osmosis,,"- Membrane biofouling
+- Hydrodynamic 
+-Mass transfer",MRT,"U field: D3Q19 
+C field: D3Q19","- Non-periodic solid wall
+- Non-slip: liquid/ biofilm and solid/liquid interface
+- Inlet: U and C constant
+- Outlet: P constant, diffusive flux = 0
+- impermeability: solid-fluid interface
+- Mass flux continuity: biofilm/ liquid interface","Grid nodes:
+Nx = 120 
+Ny = 120
+Nz = 120","- Monod kinetic
+- IbM model",57.19,Pintelon et al. (2010)
+Photosynthetic Bioreactor,Glucose,"- Fluid flow 
+- Mass transfer
+- PSB grow 
+- H2 production",BGK,"U field: D2Q9 
+C field: D2Q5","- Curved boundary: non-equilibrium extrapolation
+- Inlet: parabolic velocity 
+- Outlet: P constant 
+- Parallel to the X-axis: free-slip U and C constant","Grid nodes:
+Nx = 441 
+Ny = 83",- Monod kinetic,5.85,Yang et al. (2011)
+Degradation of herbicide in microﬂuidic ﬂow cells by Delftia acidovorans,"R-2,4-DP*","- Fluid flow 
+- Mass transfer
+- Bioreaction
+- Contaminant removal",BGK,"U field: D2Q9 
+C field: ﬁnite difference","- Inlet: constant concentration
+- Solid walls/ biofilm surface: non-slip (half-way bounce- back) 
+- Outlet: zero gradient in the flow direction for chemical species
+- No flux at all solid surfaces","x = 3H
+y = 4P + D
+
+Where:
+H: length
+D: 400µm
+P: 1.8D","- Monod kinetic
+- Cellular automata ",4.97,Tang et al. (2013)
+Couette–Taylor photobioreactor,,- Fluid flow,BGK,U field: D3Q19,"- Curved moving wall: Filippova-Hänel
+- Bounce-back at solid wall
+- Half-way bounce-back: between the fluid and the outer lattice node","Grid Node at transverse plane:
+Nx = 64
+Ny = 64","- PSF stochastic model for microalgae 
+(parallel CUDA.)","10.88 
+",Štumbauer et al. (2013)
+"Photosynthetic Bioreactor with porous granule
+immobilized",Glucose,"- Fluid flow 
+- Mass transfer
+- PSB grow 
+- H2 production",REV-scale LB,"U field: D2Q9 
+C field: D2Q5","- Inlet, outlet: Periodic
+- Top, bottom: U=U0
+- Bottom: C=C0.
+- Top: C=1.0","Multi-block LBM:
+- Coarse block
+ 0 ≤ X ≤ L/2 
+- Fine block:
+ L/2 < X ≤ L",- Monod kinetic,16.0,Liao et al. (2013)
+Photosynthetic Bioreactor,Glucose,"- Fluid flow 
+- Mass transfer 
+- Bioreaction 
+- H2 production production",Pore-scale LB/ QSGS,"U field: D3Q15 
+C field: D3Q7","- Inlet: U=U0, C=C0.
+- Wall: U=0; 
+- Outlet: free outflow","Multi-block LBM (grid density): 
+- Fine block: 60
+- Coarse block: 30",- Monod kinetic,5.65,Liao et al. (2017)
+"Mono-species biofilm growth in
+porous media",,"- Fluid flow
+- Mass transfer
+- Bioreaction",BGK,"U field: D3Q19 
+C field: D3Q19","- Non-slip:fluid/solid, fluid/biofilm interface
+- Immersed Boundary","Nodes:
+Nx = 150 
+Nz = 150","- Monod kinetic
+- Cellular automata ",46.16,Benioug et al. (2017)
+Continuous-flow anaerobic packed-bed reactor,Sugarcane vinasse,- Chemical species transport,BGK,"D1Q2 or
+D1Q3","Inlet: Dirichlet or Danckwerts
+Outlet: null-Neumann","lx = U * HRT
+(1000 m = 1.0 lu)",- Monod kinetic,28.07,Fortunato et al. (2018)
+Membrane photobioreactor with a circular optical fiber,Glucose,"- Fluid flow 
+- Mass transfer
+- PSB grow 
+- H2 production",REV-scale LB,"U field: D2Q9 
+C field: D2Q5","- Iinlet, outlet: Periodic
+- Top, bottom: U=U0
+- Bottom: C=C0.
+- Top: C=1.0
+- Curved boundary of optical fiber","Multi-block LBM:
+- Coarse grid
+Nx = 101
+Ny = 15 
+- Fine grid:
+Nx = 201
+Ny = 41",- Monod kinetic,16.0,"Yang, Li (2018)"
+"Biofilm growth in
+porous media",,"- Fluid flow
+- Mass transfer
+- Bioreaction",BGK,"U field: D2Q9 
+C field: D2Q9","- Multilevel bounce-back
+- Periodic in x and
+no-slip in y","Nx = 128
+Ny =128","- Monod kinetic
+- IbM model",0.89,"Tian, Wang (2019)"
+Microbial Fuel Cell,Solid organic fraction of municipal waste,"- H+ ions migration
+- Membrane fouling
+- Power generation",BGK,"U field: D2Q9 
+","- Reactive BC
+(no-slip for water
+and solid waste species; transparent internal boundary for H+ ions)","lx: 400 
+ly: 100 
+Node large: 40,000",- Zwietering et al. (1990),7.005,"Krastev, Falcucci (2019)"
+Anaerobic Digestor,Municipal wastewater,"- Flow patterns mixing: solid, liquid, gaseous phases",HLBM,U field: D3Q27,"- Bottom and lateral: zero-velocity Bouzidi
+- Top: partial-slip (Hybrid bounce-back/ Free-slip)","Node diameter: 400 
+Node large: 27,579,306",,16.6,Dapelo et al. (2019)
+Multispecies nitrifying biofilm in porous media,Ammonium/nitrite,"- Fluid flow
+- Mass transfer
+- Bioreaction for ammonium and nitrite oxidizer bacterial",BGK,"U field: D2Q9 
+C field: D2Q9","- Inlet: U and C constant
+- Solid walls/surfaces: non-slip, Neumann
+- Biofilm surface: Neumann
+- Outlet: flow field and mass transport with zero gradient","x = 3H
+y = 4P + D
+
+Where:
+H: length
+D: 400µm
+P: 1.8D","- Monod kinetic
+- Cellular automata ",11.42,"Delavar, Wang (2020)"

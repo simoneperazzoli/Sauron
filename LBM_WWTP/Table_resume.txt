@@ -1,0 +1,421 @@
+﻿Process
+	
+
+Substrate
+	
+
+Parameters Assessed
+	Collision Model
+	Lattice Dimension
+	Boundary condition
+	Computational Domain  (lu)
+	
+
+Bio- model
+	
+
+Normalized error for model validation (%) 
+	
+
+Ref.
+	Mono-species biofilm growth 
+	n.a.
+	- Fluid flow
+- Mass transfer
+- Bioreaction 
+	BGK
+	U field: D2Q9
+C  field: D2Q9
+	- Non-slip: fluid/biofilm interface
+- Inlet: C constant 
+- Outlet: Cgradient  = 0
+Top: U = 0
+- Biofilm: impermeable walls borders at left, right and bottom
+	Grid nodes:
+- Re 0.032 to 0.255
+Nx = 480 
+Nz = 240 
+- Re 0.510 to 32.64
+Nx = 480 
+Nz = 120 
+	- Monod kinetic
+
+
+
+
+	n.a.
+	Picioreanu et al. (2000[a]a)
+	Mono-species biofilm growth 
+	n.a.
+	-  Fluid flow
+- Mass transfer
+- Bioreaction 
+
+
+	BGK
+	U field: D2Q9 
+C  field: D2Q9
+	- Non-slip: fluid/biofilm interface
+- Inlet: C constant 
+- Outlet: Cgradient  = 0
+Top: U = 0
+- Biofilm: impermeable walls borders at left, right and bottom
+	Grid nodes:
+Nx = 512 
+Nz = 129
+	- Monod kinetic
+- Cellular automata rule
+
+
+	n.a.
+	Picioreanu et al (2000b)[b]
+	Biofilm growth in
+porous media
+
+
+	n.a.
+	- Fluid flow
+- Mass transfer
+- Bioreaction 
+	BGK
+	D3Q19
+	- Non-periodic solid wall
+- Non-slip: liquid/ biofilm and solid/liquid  interface
+- Inlet: U and C constant
+- Outlet: P constant, diffusive flux = 0
+- impermeability: solid-fluid interface
+- Mass flux continuity: biofilm/  liquid  interface
+	Grid nodes:
+Nx = 120 
+Ny = 120
+Nz = 120
+	- Monod kinetic
+-  IbM model
+	n.a.
+	Graf von der Schulenburg et al (2009)
+	Reverse osmosis 
+
+
+	n.a.
+	- Membrane biofouling
+- Hydrodynamic 
+-Mass transfer
+	MRT
+	D3Q19
+	- Non-periodic solid wall
+- Non-slip: liquid/ biofilm and solid/liquid  interface
+- Inlet: U and C constant
+- Outlet: P constant, diffusive flux = 0
+- impermeability: solid-fluid interface
+- Mass flux continuity: biofilm/  liquid  interface
+	Grid nodes:
+Nx = 120 
+Ny = 120
+Nz = 120
+	- Monod kinetic
+-  IbM model
+	≃57.19
+	Pintelon et al. (2010)
+	Photosynthetic Bioreactor 
+	Glucose
+	- Fluid flow 
+- Mass transfer
+- PSB grow 
+- H2 production
+
+
+	BGK
+	U field: D2Q9 
+C  field: D2Q5
+	- Curved boundary: non-equilibrium extrapolation
+- Inlet: parabolic velocity 
+- Outlet: P constant 
+- Parallel to the X-axis: free-slip U and C constant
+	Grid nodes:
+Nx = 441 
+Ny = 83
+
+
+
+
+
+
+	- Monod kinetic
+	≃5.85
+	Yang et al. (2011)
+	Degradation of herbicide in microﬂuidic ﬂow cells by Delftia acidovorans
+	R-2,4-DP*
+	- Fluid flow 
+- Mass transfer
+- Bioreaction
+- Contaminant removal
+	BGK
+	U field: D2Q9 
+C  field: ﬁnite difference
+	- Inlet: constant concentration
+- Solid walls/ biofilm surface: non-slip (half-way bounce- back) 
+-  Outlet: zero gradient in the flow direction for chemical species
+- No flux at all solid surfaces
+	x = 3H
+y = 4P + D
+
+
+Where:
+H: length
+D: 400µm
+P: 1.8D
+	- Monod kinetic
+- Cellular automata rule
+	≃ 4.42 to 5.52
+	Tang et al. (2013)
+	Couette–Taylor photobioreactor
+	n.a.
+	- Fluid flow 
+	BGK
+	U field: D3Q19 
+	- Curved moving wall: Filippova-Hänel
+- Bounce-back at solid wall
+- Half-way bounce-back: between the fluid and the outer lattice node 
+	Grid Node at transverse plane:
+Nx = 64
+Ny = 64
+	- PSF stochastic model for microalgae 
+(parallel CUDA.) 
+	≃10.88 
+(to I/Iopt:1.0)
+	Štumbauer et al. (2013)
+	Photosynthetic Bioreactor with porous granule
+immobilized
+
+
+	Glucose
+	- Fluid flow 
+- Mass transfer
+- PSB grow 
+- H2 production
+
+
+	REV-scale LB
+
+
+
+
+	U field: D2Q9 
+C  field: D2Q5
+	- Inlet, outlet: Periodic
+- Top, bottom: U=U0
+- Bottom: C=C0.
+- Top: C=1.0
+	Multi-block LBM:
+- Coarse block
+ 0 ≤ X ≤ L/2 
+- Fine block:
+ L/2 < X ≤  L
+	- Monod kinetic
+	≃16.0
+	Liao et al. (2013)
+	Photosynthetic Bioreactor 
+	Glucose
+	- Fluid flow 
+- Mass transfer  
+- Bioreaction 
+- H2 production production
+	Pore-scale  LB/ QSGS
+	U field: D3Q15 
+C  field: D3Q7
+
+
+	- Inlet: U=U0, C=C0.
+- Wall: U=0;  <math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac bevelled="true"><mrow><mo>&#x2202;</mo><mi>C</mi></mrow><mrow><mo>&#x2202;</mo><mi mathvariant="bold-italic">n</mi></mrow></mfrac><mo>=</mo><mn>0</mn></math> 
+- Outlet: free outflow
+
+
+	Multi-block LBM (grid density): 
+- Fine block: 60
+- Coarse block: 30 
+	- Monod kinetic
+	≃5.65
+	Liao et al. (2017)
+	Mono-species biofilm growth in
+porous media
+
+
+	n.a.
+	- Fluid flow
+- Mass transfer
+- Bioreaction 
+	BGK
+	D3Q19
+	- Non-slip:fluid/solid, fluid/biofilm interface
+- Immersed Boundary
+	Nodes:
+Nx = 150 
+Nz = 150 
+	- Monod kinetic
+- Cellular automata rule
+
+
+	≃ 21.5 - 70.83
+	Benioug et al. (2017)
+	Continuous-flow anaerobic packed-bed reactor
+	Sugarcane vinasse
+	- Chemical species transport
+	BGK
+	D1Q2 or
+D1Q3
+	Inlet: Dirichlet or Danckwerts
+Outlet: null-Neumann 
+	lx =  U * HRT
+(1000 m = 1.0 lu)
+	- Monod kinetic
+	≃28.07
+	Fortunato et al. (2018)
+	Biofilm growth in
+porous media
+	n.a.
+	- Fluid flow
+- Mass transfer
+- Bioreaction 
+	BGK
+	D2Q9
+	- Multilevel bounce-back
+- Periodic in x and
+no-slip in y
+
+
+	Nx = 128
+Ny =128
+	- Monod kinetic
+- IbM
+	≃0.89
+	Tian, Wang (2019)[c]
+	Membrane photobioreactor with a circular optical fiber
+	Glucose
+	- Fluid flow 
+- Mass transfer
+- PSB grow 
+- H2 production
+
+
+	REV-scale LB
+
+
+
+
+
+
+	U field: D2Q9 
+C  field: D2Q5
+	- Iinlet, outlet: Periodic
+- Top, bottom: U=U0
+- Bottom: C=C0.
+- Top: C=1.0
+- Curved boundary of optical fiber
+	Multi-block LBM:
+- Coarse grid
+Nx = 101
+Ny = 15 
+- Fine grid:
+Nx = 201
+Ny = 41
+	- Monod kinetic
+	≃16.0
+	Yang, Li (2018)
+	Microbial Fuel Cell
+	Solid organic fraction of municipal waste
+	- H+ ions migration
+- Membrane fouling
+- Power generation
+	BGK
+	D2Q9
+	- Reactive BC
+(no-slip for water
+and solid waste species; transparent internal boundary for H+ ions)
+	lx: 400 
+ly: 100 
+Node large: 40,000 
+	(to see)
+	P x I ≃ 9.67
+V x I ≃  4.34
+	Krastev, Falcucci (2019)
+	Anaerobic Digestor
+	Municipal wastewater
+	- Flow patterns mixing: solid, liquid, gaseous phases
+	HLBM
+	D3Q27
+	- Bottom and lateral: zero-velocity Bouzidi
+- Top:  partial-slip (Hybrid bounce-back/ Free-slip)
+	Node diameter: 400 
+Node large: 27,579,306 
+	n.a.
+	y_coord ≃0.25
+x_coord ≃16.6
+	Dapelo et al. (2019)
+	Multispecies nitrifying biofilm in porous media
+	Ammonium/nitrite
+	- Fluid flow
+- Mass transfer
+- Bioreaction for ammonium and nitrite oxidizer bacterial
+	BGK
+	D2Q9
+	- Inlet: U and C constant
+- Solid walls/surfaces: non-slip, Neumann
+- Biofilm surface: Neumann
+- Outlet: flow field and mass transport with zero gradient
+	x = 3H
+y = 4P + D
+
+
+Where:
+H: length
+D: 400µm
+P: 1.8D
+	- Monod kinetics
+- Cellular automata rule
+	≃ 11.42
+	Delavar, Wang (2020)
+	Where: BGK:  Bhatnagar-Gross-Krook; C: concentration; HLBM: Homogenised Lattice-Boltzmann Model; HRT: hydraulic retention time; IbM: Individual- based model; MRT: Multiple relaxation time; P: pressure; PBS: photosynthetic bacteria; PSF: photosynthetic factory; QSGS: quartet structure generation; REV: representative elementary volume, U: velocity; n.a.: not available
+
+
+*R-2,4-DP: (R)-2-(2,4-dichloro-phenoxy)propionate
+	
+
+
+
+
+
+
+
+References
+Benioug, M., Golfier, F., Oltéan, C., Buès, M., Bahar, T., & Cuny, J. (2017). An immersed boundary-lattice Boltzmann model for biofilm growth in porous media. Advances in Water Resources, 107, 65-82. doi:10.1016/j.advwatres.2017.06.009
+D. A. Graf Von Der Schulenburg, Pintelon, T. R., Picioreanu, C., Loosdrecht, M. C., & Johns, M. L. (2009). Three-dimensional simulations of biofilm growth in porous media. AIChE Journal, 55(2), 494-504. doi:10.1002/aic.11674
+Dapelo, D., Trunk, R., Krause, M. J., & Bridgeman, J. (2019). Towards Lattice-Boltzmann modelling of unconfined gas mixing in anaerobic digestion. Computers & Fluids, 180, 11-21. doi:10.1016/j.compfluid.2018.12.008
+Delavar, M. A., & Wang, J. (2020). Pore‐scale modeling of competition and cooperation of multispecies biofilms for nutrients in changing environments. AIChE Journal. doi:10.1002/aic.16919
+Fortunato, V. A., Caneppele, F. L., Ribeiro, R., & Rabi, J. A. (2017). Development of in-house lattice-Boltzmann simulator of bioreactors for wastewater treatment: Basic concepts and initial results. Water Science and Technology, 77(3), 838-847. doi:10.2166/wst.2017.597
+Fortunato, V. A., Caneppele, F. L., Ribeiro, R., & Rabi, J. A. (2017). Development of in-house lattice-Boltzmann simulator of bioreactors for wastewater treatment: Basic concepts and initial results. Water Science and Technology, 77(3), 838-847. doi:10.2166/wst.2017.597
+Krastev, V. K., & Falcucci, G. (2019). Evaluating the electrochemical and power performances of microbial fuel cells across physical scales: A novel numerical approach. International Journal of Hydrogen Energy, 44(9), 4468-4475. doi:10.1016/j.ijhydene.2018.11.226
+Liao, Q., Yang, Y. X., Zhu, X., & Chen, R. (2013). Lattice Boltzmann simulation of substrate solution through a porous granule immobilized PSB-cell for biohydrogen production. International Journal of Hydrogen Energy, 38(35), 15700-15709. doi:10.1016/j.ijhydene.2013.04.056
+Liao, Q., Yang, Y. X., Zhu, X., & Chen, R. (2013). Lattice Boltzmann simulation of substrate solution through a porous granule immobilized PSB-cell for biohydrogen production. International Journal of Hydrogen Energy, 38(35), 15700-15709. doi:10.1016/j.ijhydene.2013.04.056
+Liao, Q., Yang, Y., Zhu, X., Chen, R., & Fu, Q. (2017). Pore-scale lattice Boltzmann simulation of flow and mass transfer in bioreactor with an immobilized granule for biohydrogen production. Science Bulletin, 62(1), 22-30. doi:10.1016/j.scib.2016.11.004
+Liao, Q., Yang, Y., Zhu, X., Chen, R., & Fu, Q. (2017). Pore-scale lattice Boltzmann simulation of flow and mass transfer in bioreactor with an immobilized granule for biohydrogen production. Science Bulletin, 62(1), 22-30. doi:10.1016/j.scib.2016.11.004
+Picioreanu, C., Loosdrecht, M. C., & Heijnen, J. J. (2000). Effect of diffusive and convective substrate transport on biofilm structure formation: A two-dimensional modeling study. Biotechnology and Bioengineering, 69(5), 504-515. doi:10.1002/1097-0290(20000905)69:53.0.co;2-s
+Picioreanu, C., Loosdrecht, M. C., & Heijnen, J. J. (2000). A theoretical study on the effect of surface roughness on mass transport and transformation in biofilms. Biotechnology and Bioengineering, 68(4), 355-369. doi:10.1002/(sici)1097-0290(20000520)68:43.0.co;2-a
+Pintelon, T. R., Creber, S. A., Daniel A. Graf Von Der Schulenburg, & Johns, M. L. (2010). Validation of 3D simulations of reverse osmosis membrane biofouling. Biotechnology and Bioengineering, 106(4), 677-689. doi:10.1002/bit.22717
+Tang, Y., Valocchi, A. J., Werth, C. J., & Liu, H. (2013). An improved pore-scale biofilm model and comparison with a microfluidic flow cell experiment. Water Resources Research, 49(12), 8370-8382. doi:10.1002/2013wr013843
+Tang, Y., Valocchi, A. J., Werth, C. J., & Liu, H. (2013). An improved pore-scale biofilm model and comparison with a microfluidic flow cell experiment. Water Resources Research, 49(12), 8370-8382. doi:10.1002/2013wr013843
+Tian, Z., & Wang, J. (2019). Lattice Boltzmann simulation of biofilm clogging and chemical oxygen demand removal in porous media. AIChE Journal, 65(9). doi:10.1002/aic.16661
+Yang, Y., Liao, Q., Zhu, X., Wang, H., Wu, R., & Lee, D. (2011). Lattice Boltzmann simulation of substrate flow past a cylinder with PSB biofilm for bio-hydrogen production. International Journal of Hydrogen Energy, 36(21), 14031-14040. doi:10.1016/j.ijhydene.2011.04.026
+Yang, Y., Liao, Q., Zhu, X., Wang, H., Wu, R., & Lee, D. (2011). Lattice Boltzmann simulation of substrate flow past a cylinder with PSB biofilm for bio-hydrogen production. International Journal of Hydrogen Energy, 36(21), 14031-14040. doi:10.1016/j.ijhydene.2011.04.026
+Yang, Y., & Li, J. (2018). Simulation of photobioreaction for hydrogen production in membrane bioreactor with an optical fiber. Applied Physics A, 124(5). doi:10.1007/s00339-018-1790-3
+Štumbauer, V., Petera, K., & Štys, D. (2013). The lattice Boltzmann method in bioreactor design and simulation. Mathematical and Computer Modelling, 57(7-8), 1913-1918. doi:10.1016/j.mcm.2011.12.033
+Štumbauer, V., Petera, K., & Štys, D. (2013). The lattice Boltzmann method in bioreactor design and simulation. Mathematical and Computer Modelling, 57(7-8), 1913-1918. doi:10.1016/j.mcm.2011.12.033
+
+
+[a]Mathematical model-
+ing of biofilm structure with a hybrid differential discrete cellular
+automaton approach
+[b]Effect of Diffusive and Convective
+Substrate Transport on Biofilm Structure
+Formation: A Two-Dimensional
+Modeling Study
+[c]validation with Picioreanu et al. (1998)
