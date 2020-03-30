@@ -1,1 +1,1 @@
-# Modelling-WWTP-through-Lattice-Boltzmann-Method
+# Mathematical modeling of WWTP through Lattice Boltzmann Method
