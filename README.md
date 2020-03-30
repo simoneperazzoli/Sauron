@@ -10,7 +10,6 @@ The third notebook shows some statistical insights comparing the studies reporte
 
 My special thanks to [José Pedro](https://github.com/josepedro) by the contribution in this project.
 
--------------------------------------------------------------------------------------------------------------
 
 To run, follow the instruction bellow:
 
