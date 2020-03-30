@@ -6,9 +6,7 @@ Through a literature screening, we found 72 papers reporting this issue and, in 
 
 In the second notebook (Part 2), we performed an analysis of the scientific studies. To do it, it was created a dataset containing the main information extracted from the papers assessed and our analysis is based on it!
 
-The third notebook shows some statistical insights comparing the studies reported in the literature and their respective references for model validation.These results can be observed in Part 2 of this series, in the column 'Normalized error for model validation (%)' from our dataset.
-
-Data presented here were extracted from original papers by using the tool WebPlotDigitalizer. The analysis performed was: Root mean squared error, Pearson's correlation and Normalized error.
+The third notebook shows some statistical insights comparing the studies reported in the literature and their respective references for model validation.These results can be observed in Part 2 of this series, in the column 'Normalized error for model validation (%)' from our dataset. Data presented here were extracted from original papers by using the tool WebPlotDigitalizer. The analysis performed was: Root mean squared error, Pearson's correlation and Normalized error.
 
 To run, follow the instruction bellow:
 
