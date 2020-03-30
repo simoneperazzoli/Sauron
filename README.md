@@ -1,5 +1,17 @@
 # Mathematical modeling of WWTP through Lattice Boltzmann Method
 
+This repository contains a 3 notebook series where the main goal was to review the scientific bibliography related to the mathematical modelling of biotechnological wastewater treatment processes through the lattice Boltzmann method. 
+
+Through a literature screening, we found 72 papers reporting this issue and, in order to track the main authors and keywords of these studies, it was created the first notebook (Part 1).
+
+In the second notebook (Part 2), we performed an analysis of the scientific studies. To do it, it was created a dataset containing the main information extracted from the papers assessed and our analysis is based on it!
+
+The third notebook shows some statistical insights comparing the studies reported in the literature and their respective references for model validation.These results can be observed in Part 2 of this series, in the column 'Normalized error for model validation (%)' from our dataset.
+
+Data presented here were extracted from original papers by using the tool WebPlotDigitalizer. The analysis performed was: Root mean squared error, Pearson's correlation and Normalized error.
+
+To run, follow the instruction bellow:
+
 ## Commands to run:
 
 *1) Creating a virtual environment for python3*
