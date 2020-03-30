@@ -8,6 +8,10 @@ In the second notebook (Part 2), we performed an analysis of the scientific stud
 
 The third notebook shows some statistical insights comparing the studies reported in the literature and their respective references for model validation.These results can be observed in Part 2 of this series, in the column 'Normalized error for model validation (%)' from our dataset. Data presented here were extracted from original papers by using the tool WebPlotDigitalizer. The analysis performed was: Root mean squared error, Pearson's correlation and Normalized error.
 
+My special thanks to [José Pedro](https://github.com/josepedro) by the contribution in this project.
+
+-------------------------------------------------------------------------------------------------------------
+
 To run, follow the instruction bellow:
 
 ## Commands to run:
