@@ -53,4 +53,4 @@ To run, follow the instruction bellow:
 
 
 
-				*This study is initial and is open to contribuition!*
+						*This study is open to contribution!*
