@@ -1,4 +1,4 @@
-# Mathematical modelling of biotechnological WWTP through Lattice Boltzmann Method
+# Sauron
 
 This repository contains a 3 notebook series where the main goal was to review the scientific bibliography related to the mathematical modelling of biotechnological wastewater treatment processes (WWTP) through the lattice Boltzmann method. 
 
